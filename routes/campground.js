@@ -33,12 +33,12 @@ router.post("/", middlewareObj.isLoggedIn, function(req, res){
        if(err){
            console.log(err);
        }else{
-           console.log(campground)
+           //redirect to campgrounds
+            res.redirect("/campgrounds");
        } 
     });
     
-    //redirect to campgrounds
-    res.redirect("/campgrounds");
+    
 });
 
 //NEW route displays form to create a new campground
